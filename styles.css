@@ -1,0 +1,134 @@
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+  
+  header {
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+  }
+  
+  h1 {
+    margin: 0;
+  }
+  
+  #todo-section {
+    padding: 20px;
+  }
+/*  
+  #todo-form {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+  } */
+  
+  #contributor-name, #task-content {
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #45a049;
+  }
+  
+  #tasks-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .task {
+    background-color: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .task p {
+    margin: 0;
+  }
+  
+  .task .contributor , .due-date {
+    font-size: 0.9em;
+    color: #777;
+  }
+  
+  .task .actions {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .complete-btn, .delete-btn {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+    cursor: pointer;
+  }
+  
+  .complete-btn:hover {
+    background-color: #2e7d32;
+  }
+  
+  .delete-btn:hover {
+    background-color: #e53935;
+  }
+  
+  .completed {
+    text-decoration: line-through;
+    color: gray;
+  }
+  #sort-options {
+    display: none; /* Hide sorting buttons initially */
+  }
+  .due-date {
+    color: #ff5722; /* Brighter color for due date */
+    font-size: 12px; /* Smaller font for less emphasis */
+    font-weight: bold;
+    margin-top: 5px;
+  }
+  .past-due {
+    background-color: #f8d7da; /* Light red background for overdue tasks */
+    color: #721c24; /* Dark red text for overdue tasks */
+    border: 1px solid #f5c6cb;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+  #sort-due-date{
+   display: none;
+  }
+  :root {
+    --background-color: white;
+    --text-color: black;
+  }
+  
+  body.dark-theme {
+    --background-color: #333;
+    --text-color: white;
+  }
+  
+  body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+  }
+  

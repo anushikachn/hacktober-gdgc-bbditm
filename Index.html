@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hackathon To-Do App</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js"></script>
+</head>
+<body>
+  <header>
+    <h1>Hackathon To-Do List</h1>
+    <p>Manage tasks collaboratively for the hackathon.</p>
+  </header>
+
+  <section id="todo-section">
+    <form id="todo-form">
+      <input type="text" id="contributor-name" placeholder="Your Name" required>
+      <input type="text" id="task-content" placeholder="Task description..." required>
+      <input type="date" id="due-date" placeholder="Due Date" required>
+      <input type="time" id="due-time" required />
+      <button type="submit">Add Task</button>
+    </form>
+    <button id="toggle-theme">Toggle Dark Theme</button>
+
+    <button id="sort-due-date">Sort by Due Date</button>
+    <div id="sort-options">
+      <button id="sort-by-completion">Sort by Completion</button>
+      <button id="sort-by-timestamp">Sort by Timestamp</button>
+    </div>
+    <div id="tasks-container">
+      <!-- Tasks will appear here dynamically -->
+    </div>
+  </section>
+ 
+
+ 
+</body>
+</html>
