@@ -1,15 +1,16 @@
+let tasks = [];
 document.addEventListener('DOMContentLoaded', function() {
 // Array to store tasks
 localStorage.clear();
-let tasks = [];
+
 
 // Load existing tasks from localStorage on page load
-window.onload = function() {
+
   if(localStorage.getItem('tasks')) {
     tasks = JSON.parse(localStorage.getItem('tasks'));
     renderTasks();
   }
-};
+
 
  // Set up theme toggle functionality on page load
  const currentTheme = localStorage.getItem('theme');
@@ -24,7 +25,7 @@ window.onload = function() {
     } else {
         localStorage.setItem('theme', 'light');
     }
-
+   });
 // Handle form submission
 document.getElementById('todo-form').addEventListener('submit', function(e) {
   e.preventDefault();
@@ -48,7 +49,7 @@ document.getElementById('todo-form').addEventListener('submit', function(e) {
   // Add the new task to the array and save it
   tasks.push(task);
   localStorage.setItem('tasks', JSON.stringify(tasks));
-
+  renderTasks();
 
   // Clear the form fields
   document.getElementById('contributor-name').value = '';
@@ -59,8 +60,8 @@ document.getElementById('todo-form').addEventListener('submit', function(e) {
 });
 
   // Re-render tasks
-  renderTasks();
-});
+ 
+   });
 
 // Function to render tasks on the page
 function renderTasks() {
@@ -179,4 +180,3 @@ function deleteTask(index) {
 }
 document.getElementById('contributor-name').value = '';
 document.getElementById('task-content').value = '';
-});
